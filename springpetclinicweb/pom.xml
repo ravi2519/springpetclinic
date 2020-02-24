@@ -5,7 +5,7 @@
     <parent>
         <groupId>in.ravir</groupId>
         <artifactId>springpetclinic</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
     </parent>
     
     <artifactId>springpetclinicweb</artifactId>
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>in.ravir</groupId>
             <artifactId>springpetclinicdata</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
         <dependency>
 			<groupId>org.springframework.boot</groupId>
