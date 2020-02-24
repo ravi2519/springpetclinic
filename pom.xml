@@ -41,7 +41,8 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:git@github.com:ravi2519/springpetclinic.git</developerConnection>
+		<url>https://github.com/ravi2519/springpetclinic</url>
+		<connection>scm:git:https://github.com/ravi2519/springpetclinic.git</connection>
 		<tag>springpetclinic-0.0.1</tag>
 	</scm>
 
