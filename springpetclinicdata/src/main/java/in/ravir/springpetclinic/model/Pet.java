@@ -1,5 +1,7 @@
 package in.ravir.springpetclinic.model;
 
+import java.time.LocalDate;
+
 public class Pet {
 
     private PetType petType;
@@ -11,7 +13,7 @@ public class Pet {
         this.petType = petType;        
     }
 
-    public void getPetType() {
+    public PetType getPetType() {
         return this.petType;        
     }
 
@@ -19,7 +21,7 @@ public class Pet {
         this.owner = owner;        
     }
 
-    public void getOwner() {
+    public Owner getOwner() {
         return this.owner;        
     }
 
@@ -27,7 +29,7 @@ public class Pet {
         this.birthDate = birthDate;        
     }
 
-    public void getBirthDate() {
+    public LocalDate getBirthDate() {
         return this.birthDate;        
     }
 
