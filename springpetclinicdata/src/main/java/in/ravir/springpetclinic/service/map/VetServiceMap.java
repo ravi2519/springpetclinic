@@ -3,13 +3,13 @@ package in.ravir.springpetclinic.service.map;
 import java.util.Set;
 
 import in.ravir.springpetclinic.model.Vet;
-import in.ravir.springpetclinic.service.CrudService;
+import in.ravir.springpetclinic.service.VetService;
 
 /**
  * VetServiceMap
  */
 public class VetServiceMap extends AbstractMapService<Vet, Long> 
-    implements CrudService<Vet, Long>{
+    implements VetService{
 
     @Override
     public Set<Vet> findAll() {
