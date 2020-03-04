@@ -2,12 +2,15 @@ package in.ravir.springpetclinic.service.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import in.ravir.springpetclinic.model.Pet;
 import in.ravir.springpetclinic.service.CrudService;
 
 /**
  * PetServiceMap
  */
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> 
     implements CrudService<Pet, Long>{
 
