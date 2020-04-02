@@ -2,9 +2,11 @@ package in.ravir.springpetclinic.service.map;
 
 import in.ravir.springpetclinic.model.PetType;
 import in.ravir.springpetclinic.service.PetTypeService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetTypeMapService extends AbstractMapService implements PetTypeService {
 
 
