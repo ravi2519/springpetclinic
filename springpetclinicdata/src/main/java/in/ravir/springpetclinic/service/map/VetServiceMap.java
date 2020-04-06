@@ -1,11 +1,12 @@
 package in.ravir.springpetclinic.service.map;
 
-import java.util.Set;
-
+import in.ravir.springpetclinic.model.Speciality;
+import in.ravir.springpetclinic.model.Vet;
+import in.ravir.springpetclinic.service.SpecialityService;
+import in.ravir.springpetclinic.service.VetService;
 import org.springframework.stereotype.Service;
 
-import in.ravir.springpetclinic.model.Vet;
-import in.ravir.springpetclinic.service.VetService;
+import java.util.Set;
 
 /**
  * VetServiceMap
@@ -13,6 +14,12 @@ import in.ravir.springpetclinic.service.VetService;
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> 
     implements VetService{
+
+    private final SpecialityService specialityService;
+
+    public VetServiceMap(SpecialityService specialityService) {
+        this.specialityService = specialityService;
+    }
 
     @Override
     public Set<Vet> findAll() {
@@ -26,6 +33,16 @@ public class VetServiceMap extends AbstractMapService<Vet, Long>
 
     @Override
     public Vet save(Vet object) {
+
+        if( object.getSpecialities().size() > 0 ) {
+            object.getSpecialities().forEach( speciality -> {
+                if( speciality.getId() == null ) {
+                    Speciality saveSpeciality = specialityService.save(speciality);
+                    speciality.setId(saveSpeciality.getId());
+                }
+            });
+        }
+
         return super.save(object);
     }
 
