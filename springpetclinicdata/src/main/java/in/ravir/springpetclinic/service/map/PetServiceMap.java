@@ -1,18 +1,17 @@
 package in.ravir.springpetclinic.service.map;
 
-import java.util.Set;
-
+import in.ravir.springpetclinic.model.Pet;
+import in.ravir.springpetclinic.service.PetService;
 import org.springframework.stereotype.Service;
 
-import in.ravir.springpetclinic.model.Pet;
-import in.ravir.springpetclinic.service.CrudService;
+import java.util.Set;
 
 /**
  * PetServiceMap
  */
 @Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> 
-    implements CrudService<Pet, Long>{
+    implements PetService {
 
         @Override
         public Set<Pet> findAll() {
